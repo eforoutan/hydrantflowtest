@@ -1062,7 +1062,7 @@
               flow3_pitot:       state.flowHydrants[2]?.pitot    || "—",
               // SECURITY: Only send the path + query string, not the full
               // origin, to avoid leaking server hostname to EmailJS logs.
-              form_url:          window.location.pathname + window.location.search,
+              form_url:          window.location.href,
             });
             console.log("Email notification sent.");
           } catch (emailErr) {
